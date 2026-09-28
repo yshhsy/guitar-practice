@@ -23,15 +23,15 @@
 
       el.innerHTML = `
         <style>
-          .crx-name { font-size: 58px; font-weight: 800; color: #17614e; letter-spacing: 2px; line-height: 1.15; }
+          .crx-name { font-size: 58px; font-weight: 800; color: #0fa873; letter-spacing: 2px; line-height: 1.15; }
           .crx-diff { display: inline-block; padding: 3px 13px; border-radius: 999px; font-size: 12px; font-weight: 700; margin-top: 4px;
-            background: #f6ead0; border: 1px solid #e8d5ac; color: #8a6414; letter-spacing: 2px; }
-          .crx-diff.hard { background: #f3e0da; border-color: #e3c3b8; color: #b4503c; }
-          .crx-tip { font-size: 12.5px; color: #6d6455; line-height: 1.75; margin-top: 10px; text-align: justify; }
-          .crx-bar { height: 8px; border-radius: 999px; background: #ece4d2; overflow: hidden; margin-top: 12px; }
-          .crx-bar > i { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, #c99a3f, #b4503c); border-radius: 999px; transition: width .05s linear; }
-          .crx-stat { font-size: 12.5px; color: #6d6455; }
-          .crx-stat b { color: #17614e; font-size: 16px; font-variant-numeric: tabular-nums; }
+            background: #fdf3e0; border: 1px solid #f6e3bd; color: #9a6a10; letter-spacing: 2px; }
+          .crx-diff.hard { background: #fceae6; border-color: #f3cfc9; color: #e05d4d; }
+          .crx-tip { font-size: 12.5px; color: #64707c; line-height: 1.75; margin-top: 10px; text-align: justify; }
+          .crx-bar { height: 8px; border-radius: 999px; background: #e9edf1; overflow: hidden; margin-top: 12px; }
+          .crx-bar > i { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, #f0a22e, #e05d4d); border-radius: 999px; transition: width .05s linear; }
+          .crx-stat { font-size: 12.5px; color: #64707c; }
+          .crx-stat b { color: #0fa873; font-size: 16px; font-variant-numeric: tabular-nums; }
         </style>
 
         <div class="card">
@@ -57,8 +57,8 @@
           <div class="row between wrap">
             <button class="btn-mini" data-auto>⏱ 自动模式：关</button>
             <div class="row" style="gap:6px">
-              <span style="font-size:12px;color:#6d6455">切换间隔</span>
-              <b data-sec style="color:#17614e;min-width:36px;text-align:right;font-variant-numeric:tabular-nums">5s</b>
+              <span style="font-size:12px;color:#64707c">切换间隔</span>
+              <b data-sec style="color:#0fa873;min-width:36px;text-align:right;font-variant-numeric:tabular-nums">5s</b>
             </div>
           </div>
           <input type="range" min="2" max="10" step="1" value="5" data-slider>

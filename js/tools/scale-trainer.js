@@ -4,8 +4,8 @@
  * ============================================================ */
 (function () {
   const ID = 'scale-trainer';
-  const GREEN = '#17614e';
-  const GOLD = '#c99a3f';
+  const GREEN = '#0fa873';
+  const GOLD = '#f0a22e';
 
   const ROOTS = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'G#', 'A', 'Bb', 'B'];
   const POSITIONS = [
@@ -47,12 +47,12 @@
 
     el.innerHTML = `
     <style>
-      #${ID} .st-title { font-size: 12px; font-weight: 700; color: #6d6455; letter-spacing: 2px; margin: 2px 0 8px; }
-      #${ID} .st-legend { display: flex; justify-content: center; gap: 16px; margin-top: 10px; font-size: 12px; color: #6d6455; }
+      #${ID} .st-title { font-size: 12px; font-weight: 700; color: #64707c; letter-spacing: 2px; margin: 2px 0 8px; }
+      #${ID} .st-legend { display: flex; justify-content: center; gap: 16px; margin-top: 10px; font-size: 12px; color: #64707c; }
       #${ID} .st-legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
       #${ID} .st-legend i.ring { background: none; border: 2.4px solid ${GOLD}; width: 7px; height: 7px; }
       #${ID} .st-flavor { margin-top: 14px; font-size: 13px; }
-      #${ID} .st-flavor b { color: #8a6414; }
+      #${ID} .st-flavor b { color: #9a6a10; }
     </style>
     <div id="${ID}">
       <div class="card">

@@ -97,13 +97,13 @@ const tool = {
       <style>
         .cm-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
         .cm-card{
-          border:1.5px solid #e3d8bf;border-radius:14px;background:#fffdf7;
+          border:1.5px solid #e3e8ee;border-radius:14px;background:#ffffff;
           padding:12px 8px;text-align:center;transition:border-color .15s;
         }
-        .cm-card.on{border-color:#17614e;box-shadow:0 0 0 1px #17614e;}
-        .cm-card .cm-name{font-size:19px;font-weight:800;color:#2e2a22;}
-        .cm-card .cm-desc{font-size:11px;color:#6d6455;line-height:1.6;min-height:34px;margin:6px 0 8px;}
-        .cm-card .cm-nodiag{font-size:11px;color:#a29681;padding:30px 0;}
+        .cm-card.on{border-color:#0fa873;box-shadow:0 0 0 1px #0fa873;}
+        .cm-card .cm-name{font-size:19px;font-weight:800;color:#1b1f24;}
+        .cm-card .cm-desc{font-size:11px;color:#64707c;line-height:1.6;min-height:34px;margin:6px 0 8px;}
+        .cm-card .cm-nodiag{font-size:11px;color:#9aa5b0;padding:30px 0;}
         .cm-card .cm-btns{display:flex;gap:6px;justify-content:center;margin-top:8px;}
         .cm-card .btn-mini{padding:6px 8px;font-size:11.5px;}
       </style>
@@ -127,14 +127,14 @@ const tool = {
 
       <div class="card">
         <h2>和弦情绪地图</h2>
-        <div style="font-size:13.5px;line-height:2;color:#6d6455">
-          <b style="color:#17614e">大和弦</b>＝明亮坚定 ·
-          <b style="color:#17614e">小和弦</b>＝忧郁内敛 ·
-          <b style="color:#c99a3f">7</b>＝紧张、想解决 ·
-          <b style="color:#c99a3f">maj7</b>＝慵懒微醺 ·
-          <b style="color:#c99a3f">m7</b>＝温柔松弛 ·
-          <b style="color:#b4503c">sus</b>＝悬空未定 ·
-          <b style="color:#17614e">add9 / 6</b>＝加一层颜色，情绪不变
+        <div style="font-size:13.5px;line-height:2;color:#64707c">
+          <b style="color:#0fa873">大和弦</b>＝明亮坚定 ·
+          <b style="color:#0fa873">小和弦</b>＝忧郁内敛 ·
+          <b style="color:#f0a22e">7</b>＝紧张、想解决 ·
+          <b style="color:#f0a22e">maj7</b>＝慵懒微醺 ·
+          <b style="color:#f0a22e">m7</b>＝温柔松弛 ·
+          <b style="color:#e05d4d">sus</b>＝悬空未定 ·
+          <b style="color:#0fa873">add9 / 6</b>＝加一层颜色，情绪不变
         </div>
       </div>
     `;

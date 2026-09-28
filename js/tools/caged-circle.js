@@ -4,8 +4,8 @@
  * ============================================================ */
 (function () {
   const ID = 'caged-circle';
-  const GREEN = '#17614e';
-  const GOLD = '#c99a3f';
+  const GREEN = '#0fa873';
+  const GOLD = '#f0a22e';
 
   /* C 大和弦的五个标准 CAGED 把位（frets 下标 0 = 6 弦） */
   const CAGED = [
@@ -38,23 +38,23 @@
 
     el.innerHTML = `
     <style>
-      #${ID} .cc-p { font-size: 14px; line-height: 1.8; color: #2e2a22; }
+      #${ID} .cc-p { font-size: 14px; line-height: 1.8; color: #1b1f24; }
       #${ID} .cc-p b { color: ${GREEN}; }
       #${ID} .cc-badge { display: inline-flex; align-items: center; justify-content: center;
-        width: 22px; height: 22px; border-radius: 7px; background: #e4efe9; color: ${GREEN};
+        width: 22px; height: 22px; border-radius: 7px; background: #e2f6ee; color: ${GREEN};
         font-size: 12px; font-weight: 800; margin-right: 6px; }
-      #${ID} .cc-pos { font-size: 11.5px; color: #a29681; margin-left: 8px; }
+      #${ID} .cc-pos { font-size: 11.5px; color: #9aa5b0; margin-left: 8px; }
       #${ID} .cc-shape-name { font-size: 15px; font-weight: 800; }
-      #${ID} .cc-desc { flex: 1; font-size: 12.5px; color: #6d6455; line-height: 1.65; min-width: 0; }
+      #${ID} .cc-desc { flex: 1; font-size: 12.5px; color: #64707c; line-height: 1.65; min-width: 0; }
       #${ID} .cc-fig { flex: none; }
-      #${ID} .cc-shift { padding: 14px 0; border-bottom: 1px dashed #e3d8bf; }
+      #${ID} .cc-shift { padding: 14px 0; border-bottom: 1px dashed #e3e8ee; }
       #${ID} .cc-shift:last-child { border-bottom: none; padding-bottom: 2px; }
       #${ID} .cc-chordname { font-size: 20px; font-weight: 800; color: ${GREEN}; min-width: 56px; text-align: right; }
       #${ID} .cc-deg-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; }
       #${ID} .cc-deg { display: flex; align-items: center; gap: 8px; }
-      #${ID} .cc-rn { width: 34px; text-align: right; font-size: 12.5px; font-weight: 700; color: #a29681; font-style: italic; }
+      #${ID} .cc-rn { width: 34px; text-align: right; font-size: 12.5px; font-weight: 700; color: #9aa5b0; font-style: italic; }
       #${ID} .cc-keynote { font-size: 13px; line-height: 1.9; }
-      #${ID} .cc-title { font-size: 12px; font-weight: 700; color: #6d6455; letter-spacing: 2px; margin: 2px 0 8px; }
+      #${ID} .cc-title { font-size: 12px; font-weight: 700; color: #64707c; letter-spacing: 2px; margin: 2px 0 8px; }
     </style>
     <div id="${ID}">
       <div class="seg" data-part="seg">
@@ -161,8 +161,8 @@
       const cx = 170, cy = 170, R = 116;
       let s = `<svg viewBox="0 0 340 340" width="340" style="max-width:100%" xmlns="http://www.w3.org/2000/svg">`;
       s += `<defs><marker id="${ID}-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${GOLD}"/></marker></defs>`;
-      s += `<circle cx="${cx}" cy="${cy}" r="152" fill="#f8f3e6" stroke="#e3d8bf"/>`;
-      s += `<circle cx="${cx}" cy="${cy}" r="84" fill="none" stroke="#e3d8bf" stroke-dasharray="3 6"/>`;
+      s += `<circle cx="${cx}" cy="${cy}" r="152" fill="#fbfcfd" stroke="#e3e8ee"/>`;
+      s += `<circle cx="${cx}" cy="${cy}" r="84" fill="none" stroke="#e3e8ee" stroke-dasharray="3 6"/>`;
       s += `<path d="M 300 95 A 152 152 0 0 1 300 245" fill="none" stroke="${GOLD}" stroke-width="2" marker-end="url(#${ID}-arrow)"/>`;
       for (let i = 0; i < 12; i++) {
         const k = Theory.CIRCLE[i];
@@ -170,12 +170,12 @@
         const x = cx + Math.cos(a) * R, y = cy + Math.sin(a) * R;
         const sel = k === key;
         s += `<g data-key="${k}" style="cursor:pointer">
-          <circle cx="${x}" cy="${y}" r="24" fill="${sel ? GREEN : '#fffdf7'}" stroke="${sel ? GREEN : '#e3d8bf'}" stroke-width="${sel ? 2.5 : 1.5}"/>
-          <text x="${x}" y="${y + 5}" text-anchor="middle" font-size="15" font-weight="700" fill="${sel ? '#f3efe4' : '#2e2a22'}" font-family="sans-serif">${k}</text>
+          <circle cx="${x}" cy="${y}" r="24" fill="${sel ? GREEN : '#ffffff'}" stroke="${sel ? GREEN : '#e3e8ee'}" stroke-width="${sel ? 2.5 : 1.5}"/>
+          <text x="${x}" y="${y + 5}" text-anchor="middle" font-size="15" font-weight="700" fill="${sel ? '#f4fbf8' : '#1b1f24'}" font-family="sans-serif">${k}</text>
         </g>`;
       }
-      s += `<text x="${cx}" y="${cy - 4}" text-anchor="middle" font-size="18" font-weight="800" fill="#2e2a22" font-family="sans-serif">五度圈</text>`;
-      s += `<text x="${cx}" y="${cy + 18}" text-anchor="middle" font-size="10" fill="#a29681" font-family="sans-serif">顺时针 · 上行纯五度</text>`;
+      s += `<text x="${cx}" y="${cy - 4}" text-anchor="middle" font-size="18" font-weight="800" fill="#1b1f24" font-family="sans-serif">五度圈</text>`;
+      s += `<text x="${cx}" y="${cy + 18}" text-anchor="middle" font-size="10" fill="#9aa5b0" font-family="sans-serif">顺时针 · 上行纯五度</text>`;
       s += '</svg>';
       return s;
     }

@@ -63,10 +63,10 @@ const tool = {
     el.innerHTML = `
       <style>
         .trans-step{display:flex;align-items:center;justify-content:center;gap:16px;}
-        .trans-step-num{font-size:26px;font-weight:800;color:#17614e;min-width:86px;text-align:center;
+        .trans-step-num{font-size:26px;font-weight:800;color:#0fa873;min-width:86px;text-align:center;
           font-variant-numeric:tabular-nums;}
-        .trans-bad{background:#f7e3de !important;border-color:#e0b8ae !important;color:#b4503c !important;cursor:default;}
-        .trans-copy-ok{color:#17614e !important;border-color:#17614e !important;}
+        .trans-bad{background:#fdeceb !important;border-color:#eec7bf !important;color:#e05d4d !important;cursor:default;}
+        .trans-copy-ok{color:#0fa873 !important;border-color:#0fa873 !important;}
       </style>
 
       <div class="card">
@@ -135,7 +135,7 @@ const tool = {
         ? `<div class="row wrap">${result.map((r, i) => `<span class="chord-token" data-i="${i}">${r}</span>`).join('')}</div>`
         : '<p class="hint" style="margin-top:0">输入和弦后这里实时显示结果</p>';
       badBox.innerHTML = bad.length
-        ? `<div class="field-label mt8" style="color:#b4503c">没认出来（已忽略）</div>
+        ? `<div class="field-label mt8" style="color:#e05d4d">没认出来（已忽略）</div>
            <div class="row wrap">${bad.map((b) => `<span class="chord-token trans-bad">${b}</span>`).join('')}</div>`
         : '';
       out.querySelectorAll('.chord-token').forEach((tk) => {

@@ -48,13 +48,13 @@ const tool = {
       <style>
         .cq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
         .cq-voicing{
-          border:1px solid #e3d8bf;border-radius:14px;background:#fffdf7;
+          border:1px solid #e3e8ee;border-radius:14px;background:#ffffff;
           padding:12px 8px 12px;text-align:center;
         }
-        .cq-voicing .cq-label{font-size:12px;color:#6d6455;font-weight:600;margin-bottom:6px;min-height:16px;}
+        .cq-voicing .cq-label{font-size:12px;color:#64707c;font-weight:600;margin-bottom:6px;min-height:16px;}
         .cq-voicing .cq-btns{display:flex;gap:6px;justify-content:center;margin-top:8px;}
         .cq-voicing .btn-mini{padding:6px 10px;font-size:12px;}
-        .cq-empty{padding:28px 10px;text-align:center;color:#a29681;font-size:13.5px;line-height:1.9;}
+        .cq-empty{padding:28px 10px;text-align:center;color:#9aa5b0;font-size:13.5px;line-height:1.9;}
       </style>
 
       <div class="card">
@@ -100,7 +100,7 @@ const tool = {
           <div class="card">
             <div class="cq-empty">
               <div style="font-size:30px;margin-bottom:6px">🈳</div>
-              暂时没有收录 <b style="color:#6d6455">${name}</b> 的可靠指法<br>
+              暂时没有收录 <b style="color:#64707c">${name}</b> 的可靠指法<br>
               换个性质试试，或先用「和弦衍化图」从常见和弦推导
             </div>
           </div>`;
@@ -109,7 +109,7 @@ const tool = {
       outBox.innerHTML = `
         <div class="card">
           <div class="row between" style="margin-bottom:12px">
-            <h2 style="margin:0">${name} <span style="font-size:12px;color:#a29681;font-weight:400">${Theory.parseChord(name).qualityCn}</span></h2>
+            <h2 style="margin:0">${name} <span style="font-size:12px;color:#9aa5b0;font-weight:400">${Theory.parseChord(name).qualityCn}</span></h2>
             <span class="hint" style="margin:0">${vs.length} 个把位</span>
           </div>
           <div class="cq-grid">

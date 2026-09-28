@@ -4,8 +4,8 @@
  * ============================================================ */
 (function () {
   const ID = 'theory-book';
-  const GREEN = '#17614e';
-  const GOLD = '#c99a3f';
+  const GREEN = '#0fa873';
+  const GOLD = '#f0a22e';
 
   /* getVoicings 能正确生成指型的性质（其余用真实音琶音兜底） */
   const PLAYABLE = ['', 'm', '7', 'maj7', 'M7', 'm7', 'sus4', 'sus2', 'add9', '6'];
@@ -129,33 +129,33 @@
 
     el.innerHTML = `
     <style>
-      #${ID} .tb-p { font-size: 14.5px; line-height: 1.9; color: #2e2a22; margin: 11px 0; }
+      #${ID} .tb-p { font-size: 14.5px; line-height: 1.9; color: #1b1f24; margin: 11px 0; }
       #${ID} .tb-p b { color: ${GREEN}; }
       #${ID} .tb-box { margin: 14px 0; font-size: 13.5px; line-height: 1.85; }
       #${ID} .tb-figs { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 14px 0 6px; }
       #${ID} .tb-fig { text-align: center; }
-      #${ID} .tb-fig figcaption, #${ID} .tb-cap { font-size: 11.5px; color: #a29681; margin-top: 6px; line-height: 1.6; }
+      #${ID} .tb-fig figcaption, #${ID} .tb-cap { font-size: 11.5px; color: #9aa5b0; margin-top: 6px; line-height: 1.6; }
       #${ID} .tb-title { font-size: 21px; font-weight: 800; margin: 4px 0 2px; letter-spacing: .5px; }
       #${ID} .tb-num { flex: none; width: 34px; height: 34px; border-radius: 10px;
-        background: #e4efe9; color: ${GREEN}; font-weight: 800; font-size: 13px;
+        background: #e2f6ee; color: ${GREEN}; font-weight: 800; font-size: 13px;
         display: flex; align-items: center; justify-content: center; }
-      #${ID} .tb-num.dark { background: #f6ead0; color: #8a6414; }
+      #${ID} .tb-num.dark { background: #fdf3e0; color: #9a6a10; }
       #${ID} .tb-item { cursor: pointer; }
       #${ID} .tb-item:active { transform: scale(.98); }
       #${ID} .tb-item-title { font-size: 15.5px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
-      #${ID} .tb-read { font-size: 10px; font-weight: 600; color: ${GREEN}; background: #e4efe9;
-        border: 1px solid #cfe2d8; border-radius: 6px; padding: 1.5px 6px; }
-      #${ID} .tb-item-sum { font-size: 12px; color: #6d6455; margin-top: 5px; line-height: 1.6; }
+      #${ID} .tb-read { font-size: 10px; font-weight: 600; color: ${GREEN}; background: #e2f6ee;
+        border: 1px solid #c8ecdd; border-radius: 6px; padding: 1.5px 6px; }
+      #${ID} .tb-item-sum { font-size: 12px; color: #64707c; margin-top: 5px; line-height: 1.6; }
       #${ID} .tb-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 12px 0; }
-      #${ID} .tb-table th, #${ID} .tb-table td { border-bottom: 1px dashed #e3d8bf; padding: 6.5px 8px; text-align: left; }
-      #${ID} .tb-table th { color: #a29681; font-weight: 600; font-size: 11.5px; }
+      #${ID} .tb-table th, #${ID} .tb-table td { border-bottom: 1px dashed #e3e8ee; padding: 6.5px 8px; text-align: left; }
+      #${ID} .tb-table th { color: #9aa5b0; font-weight: 600; font-size: 11.5px; }
       #${ID} .tb-table td:first-child { color: ${GREEN}; font-weight: 700; width: 52px; }
-      #${ID} .tb-prog { padding: 12px; background: #f8f3e6; border: 1px solid #e3d8bf; border-radius: 12px; margin: 12px 0; }
+      #${ID} .tb-prog { padding: 12px; background: #fbfcfd; border: 1px solid #e3e8ee; border-radius: 12px; margin: 12px 0; }
       #${ID} .tb-prog-name { font-size: 13px; font-weight: 800; color: ${GREEN}; margin-bottom: 8px; }
-      #${ID} .tb-prog-note { font-size: 12px; color: #6d6455; margin-top: 8px; line-height: 1.6; }
-      #${ID} .tb-arrow { color: #a29681; margin: 0 2px; font-size: 13px; }
+      #${ID} .tb-prog-note { font-size: 12px; color: #64707c; margin-top: 8px; line-height: 1.6; }
+      #${ID} .tb-arrow { color: #9aa5b0; margin: 0 2px; font-size: 13px; }
       #${ID} .tb-dots { display: flex; align-items: center; gap: 7px; margin: 12px 0 4px; }
-      #${ID} .tb-dots-label { font-size: 12.5px; color: #6d6455; margin-right: 8px; }
+      #${ID} .tb-dots-label { font-size: 12.5px; color: #64707c; margin-right: 8px; }
       #${ID} .tb-nav { margin-top: 18px; }
       #${ID} .tb-nav button { text-align: left; font-size: 13px; line-height: 1.5; }
       #${ID} .tb-nav button[disabled] { opacity: .4; pointer-events: none; }

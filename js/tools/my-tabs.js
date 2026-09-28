@@ -90,10 +90,10 @@
           <style>
             .mtx-card { cursor: pointer; }
             .mtx-card .mtx-title { font-size: 16px; font-weight: 800; }
-            .mtx-card .mtx-meta { font-size: 11.5px; color: #a29681; margin-top: 5px; }
+            .mtx-card .mtx-meta { font-size: 11.5px; color: #9aa5b0; margin-top: 5px; }
             .mtx-empty { text-align: center; padding: 30px 0 22px; }
             .mtx-empty .mtx-emoji { font-size: 46px; }
-            .mtx-empty .mtx-t { font-size: 15.5px; font-weight: 800; margin-top: 10px; color: #2e2a22; }
+            .mtx-empty .mtx-t { font-size: 15.5px; font-weight: 800; margin-top: 10px; color: #1b1f24; }
           </style>
         `;
         if (!tabs.length) {
@@ -177,7 +177,7 @@
             <textarea data-body rows="12" placeholder="[C]在这里写下歌词与和弦…"></textarea>
             <p class="hint" style="text-align:left;margin-top:10px">
               💡 在歌词里用方括号标记和弦，和文字的位置就是它的落点，例如：<br>
-              <b style="color:#17614e">[C]一闪一闪 [F]亮晶晶</b><br>
+              <b style="color:#0fa873">[C]一闪一闪 [F]亮晶晶</b><br>
               保存后查看时会自动把和弦对齐到歌词上方。
             </p>
           </div>
@@ -211,17 +211,17 @@
 
         el.innerHTML = `
           <style>
-            .mtx-sheet { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13.5px; line-height: 2.05; color: #2e2a22; }
+            .mtx-sheet { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13.5px; line-height: 2.05; color: #1b1f24; }
             .mtx-line { margin-top: 10px; min-height: 1.6em; }
             .mtx-line.first { margin-top: 2px; }
             .mtx-line.has-chord { margin-top: 20px; }
             .mtx-seg { position: relative; display: inline-block; white-space: pre-wrap; }
             .mtx-chord { position: absolute; top: -1.42em; left: 0; font-style: normal;
-              color: #17614e; font-weight: 700; font-size: 12.5px; letter-spacing: .5px; white-space: nowrap; }
-            .mtx-chord.bad { color: #b4503c; }
+              color: #0fa873; font-weight: 700; font-size: 12.5px; letter-spacing: .5px; white-space: nowrap; }
+            .mtx-chord.bad { color: #e05d4d; }
             .mtx-token { transition: all .12s; }
-            .mtx-token.cur { background: #17614e; border-color: #17614e; color: #fff; }
-            .mtx-token.bad { color: #b4503c; border-color: #e3c3b8; background: #f3e0da; }
+            .mtx-token.cur { background: #0fa873; border-color: #0fa873; color: #fff; }
+            .mtx-token.bad { color: #e05d4d; border-color: #f3cfc9; background: #fceae6; }
           </style>
           <div class="row between" style="margin-bottom:10px">
             <button class="btn-mini" data-back>← 返回列表</button>
@@ -235,7 +235,7 @@
             <div class="row between wrap" style="gap:8px">
               <button class="btn-mini on" data-play>▶ 播放和弦</button>
               <div class="row" style="gap:6px;flex:1;max-width:190px">
-                <span style="font-size:12px;color:#6d6455;white-space:nowrap">间隔</span>
+                <span style="font-size:12px;color:#64707c;white-space:nowrap">间隔</span>
                 <input type="range" min="5" max="30" step="1" value="12" data-speed>
               </div>
             </div>

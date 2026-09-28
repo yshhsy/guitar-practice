@@ -34,11 +34,11 @@
 
       el.innerHTML = `
         <style>
-          .csw-round { font-size: 12.5px; color: #a29681; letter-spacing: 1px; margin-bottom: 6px; }
-          .csw-cur { font-size: 62px; font-weight: 800; color: #17614e; line-height: 1.05; min-width: 86px; }
-          .csw-label { font-size: 11px; color: #a29681; margin-top: 6px; letter-spacing: 2px; }
-          .csw-next { font-size: 34px; font-weight: 700; color: #2e2a22; opacity: .32; min-width: 52px; }
-          .csw-rate { font-size: 13px; color: #6d6455; margin-top: 6px; font-weight: 600; }
+          .csw-round { font-size: 12.5px; color: #9aa5b0; letter-spacing: 1px; margin-bottom: 6px; }
+          .csw-cur { font-size: 62px; font-weight: 800; color: #0fa873; line-height: 1.05; min-width: 86px; }
+          .csw-label { font-size: 11px; color: #9aa5b0; margin-top: 6px; letter-spacing: 2px; }
+          .csw-next { font-size: 34px; font-weight: 700; color: #1b1f24; opacity: .32; min-width: 52px; }
+          .csw-rate { font-size: 13px; color: #64707c; margin-top: 6px; font-weight: 600; }
           .csw-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
         </style>
 

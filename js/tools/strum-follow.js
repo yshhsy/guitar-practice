@@ -33,7 +33,7 @@
       tip: '民谣经典的十六分版本，空拍处手不停、声不出。' },
   ];
 
-  const DIFF_COLOR = { '入门': '#17614e', '初级': '#c99a3f', '中级': '#b4503c', '进阶': '#8a4a2c' };
+  const DIFF_COLOR = { '入门': '#0fa873', '初级': '#f0a22e', '中级': '#e05d4d', '进阶': '#b04a34' };
 
   const tool = {
     id: 'strum-follow',
@@ -58,12 +58,12 @@
         }
         .sf-cell .sf-sym { line-height:1; font-weight:700; }
         .sf-cell .sf-beat { font-size:8px; color:var(--ink-3); margin-top:3px; font-variant-numeric:tabular-nums; }
-        .sf-cell.rest .sf-sym { color:#cfc3a8; font-size:18px; }
+        .sf-cell.rest .sf-sym { color:#d3dae2; font-size:18px; }
         .sf-cell.up .sf-sym { color:var(--gold); }
         .sf-cell.cur { background:var(--green); border-color:var(--green); transform:scale(1.08); box-shadow:var(--shadow); }
-        .sf-cell.cur .sf-sym, .sf-cell.cur .sf-beat { color:#f3efe4; }
+        .sf-cell.cur .sf-sym, .sf-cell.cur .sf-beat { color:#f4fbf8; }
         .sf-cell.up.cur { background:var(--gold); border-color:var(--gold); }
-        .sf-cell.up.cur .sf-sym, .sf-cell.up.cur .sf-beat { color:#3a2c0c; }
+        .sf-cell.up.cur .sf-sym, .sf-cell.up.cur .sf-beat { color:#7c4a03; }
         .sf-pat { display:flex; gap:8px; overflow-x:auto; padding:2px; }
         .sf-pat-item {
           flex:none; padding:8px 12px; border:1px solid var(--line); border-radius:11px;

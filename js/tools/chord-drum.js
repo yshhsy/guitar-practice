@@ -46,7 +46,7 @@
         .cd-prog-line { display:flex; gap:6px; overflow-x:auto; padding:2px; margin-top:12px; }
         .cd-prog-line .chord-token { flex:none; margin:0; font-size:13px; padding:5px 10px; opacity:.55; }
         .cd-prog-line .chord-token.cur { opacity:1; background:var(--green); color:#fff; border-color:var(--green); }
-        .cd-prog-line .chord-token.next { opacity:.9; border-color:var(--gold); color:#8a6414; background:var(--gold-soft); }
+        .cd-prog-line .chord-token.next { opacity:.9; border-color:var(--gold); color:#9a6a10; background:var(--gold-soft); }
         .cd-bar-num { text-align:center; font-size:11px; color:var(--ink-3); margin-top:8px; font-variant-numeric:tabular-nums; }
       `;
       el.appendChild(style);

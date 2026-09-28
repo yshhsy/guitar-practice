@@ -7,11 +7,11 @@
 
   // 乐器行定义（key 对应 pattern 数组字段）
   const ROWS = [
-    { key: 'kick',    label: '🦵', name: '底鼓',   color: '#17614e' },
-    { key: 'snare',   label: '🥁', name: '军鼓',   color: '#b4503c' },
-    { key: 'clap',    label: '👏', name: '拍手',   color: '#b4503c' },
-    { key: 'hihat',   label: '🔔', name: '踩镲',   color: '#c99a3f' },
-    { key: 'openhat', label: '🔆', name: '开镲',   color: '#c99a3f' },
+    { key: 'kick',    label: '🦵', name: '底鼓',   color: '#0fa873' },
+    { key: 'snare',   label: '🥁', name: '军鼓',   color: '#e05d4d' },
+    { key: 'clap',    label: '👏', name: '拍手',   color: '#e05d4d' },
+    { key: 'hihat',   label: '🔔', name: '踩镲',   color: '#f0a22e' },
+    { key: 'openhat', label: '🔆', name: '开镲',   color: '#f0a22e' },
   ];
 
   // 节奏型库：steps 总步数；数组为该乐器发声的步号
@@ -54,7 +54,7 @@
         }
         .dm-cell.dm-grp { margin-left:8px; }
         .dm-cell.on { border-color: transparent; }
-        .dm-cell.cur { background:#efe0bd; }
+        .dm-cell.cur { background:#e5ebf0; }
         .dm-cell.on.cur { transform: scaleY(1.18); filter: brightness(1.12); }
         .dm-steps { display:flex; margin-left:38px; margin-bottom:2px; }
         .dm-stepnum {
@@ -62,7 +62,7 @@
           font-variant-numeric:tabular-nums; border-radius:4px; padding:1px 0;
         }
         .dm-stepnum.dm-grp { margin-left:8px; }
-        .dm-stepnum.cur { background:var(--green); color:#f3efe4; font-weight:700; }
+        .dm-stepnum.cur { background:var(--green); color:#f4fbf8; font-weight:700; }
         .dm-legend { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:10px; }
         .dm-legend span { display:flex; align-items:center; gap:4px; font-size:11px; color:var(--ink-2); }
         .dm-legend i { width:10px; height:10px; border-radius:3px; display:inline-block; }

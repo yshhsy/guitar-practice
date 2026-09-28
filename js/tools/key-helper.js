@@ -49,20 +49,20 @@ const tool = {
         .kh-step{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
         .kh-step-no{
           width:26px;height:26px;flex:none;border-radius:50%;
-          background:#17614e;color:#f3efe4;font-size:13px;font-weight:800;
+          background:#0fa873;color:#f4fbf8;font-size:13px;font-weight:800;
           display:flex;align-items:center;justify-content:center;
         }
         .kh-rec{
-          border:1px solid #e3d8bf;border-radius:12px;background:#fffdf7;
+          border:1px solid #e3e8ee;border-radius:12px;background:#ffffff;
           padding:12px 14px;margin-top:10px;font-size:14.5px;line-height:1.6;
         }
-        .kh-rec.kh-best{border-color:#c99a3f;background:#f6ead0;}
+        .kh-rec.kh-best{border-color:#f0a22e;background:#fdf3e0;}
         .kh-rec .kh-tag{
-          float:right;font-size:11px;font-weight:800;color:#8a6414;
-          border:1px solid #c99a3f;border-radius:999px;padding:2px 9px;background:#fffdf7;
+          float:right;font-size:11px;font-weight:800;color:#9a6a10;
+          border:1px solid #f0a22e;border-radius:999px;padding:2px 9px;background:#ffffff;
         }
-        .kh-deg{font-size:11px;color:#a29681;display:block;margin-top:2px;}
-        .kh-drop-label{font-size:17px;font-weight:800;color:#17614e;text-align:center;margin-top:2px;}
+        .kh-deg{font-size:11px;color:#9aa5b0;display:block;margin-top:2px;}
+        .kh-drop-label{font-size:17px;font-weight:800;color:#0fa873;text-align:center;margin-top:2px;}
       </style>
 
       <div class="card">
@@ -87,9 +87,9 @@ const tool = {
 
       <div class="card">
         <h2>为什么降了调还要夹变调夹？</h2>
-        <div style="font-size:13.5px;line-height:1.9;color:#6d6455">
+        <div style="font-size:13.5px;line-height:1.9;color:#64707c">
           降调只是确定「你实际要唱多高」。但如果直接用目标调的原位和弦按，
-          往往会遇到一堆横按。变调夹的意义是：<b style="color:#2e2a22">让你继续用熟悉的开放指法的手型，
+          往往会遇到一堆横按。变调夹的意义是：<b style="color:#1b1f24">让你继续用熟悉的开放指法的手型，
           而发出的音高整体抬高到目标调</b>。手不变，音对了，两全其美。
         </div>
       </div>

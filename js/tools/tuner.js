@@ -37,26 +37,26 @@ const tool = (() => {
         <style>
           .tuner-str-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
           .tuner-str{
-            border:1px solid #e3d8bf;border-radius:14px;background:#fffdf7;
+            border:1px solid #e3e8ee;border-radius:14px;background:#ffffff;
             padding:13px 6px 11px;text-align:center;cursor:pointer;transition:all .12s;
           }
           .tuner-str:active{transform:scale(.96);}
-          .tuner-str.on{border-color:#17614e;background:#e4efe9;box-shadow:0 0 0 1px #17614e inset;}
-          .tuner-str .ts-no{font-size:11px;color:#a29681;}
-          .tuner-str .ts-note{font-size:24px;font-weight:800;color:#2e2a22;margin:2px 0;}
-          .tuner-str.on .ts-note{color:#17614e;}
-          .tuner-str .ts-freq{font-size:10.5px;color:#a29681;font-variant-numeric:tabular-nums;}
+          .tuner-str.on{border-color:#0fa873;background:#e2f6ee;box-shadow:0 0 0 1px #0fa873 inset;}
+          .tuner-str .ts-no{font-size:11px;color:#9aa5b0;}
+          .tuner-str .ts-note{font-size:24px;font-weight:800;color:#1b1f24;margin:2px 0;}
+          .tuner-str.on .ts-note{color:#0fa873;}
+          .tuner-str .ts-freq{font-size:10.5px;color:#9aa5b0;font-variant-numeric:tabular-nums;}
           .tuner-gauge{position:relative;height:64px;margin:16px 8px 2px;}
           .tuner-gauge-track{position:absolute;left:0;right:0;top:26px;height:10px;border-radius:6px;
-            background:linear-gradient(90deg,#b4503c 0%,#c99a3f 32%,#17614e 50%,#c99a3f 68%,#b4503c 100%);}
-          .tuner-gauge-center{position:absolute;left:50%;top:16px;width:2px;height:30px;background:#2e2a22;transform:translateX(-50%);}
+            background:linear-gradient(90deg,#e05d4d 0%,#f0a22e 32%,#0fa873 50%,#f0a22e 68%,#e05d4d 100%);}
+          .tuner-gauge-center{position:absolute;left:50%;top:16px;width:2px;height:30px;background:#1b1f24;transform:translateX(-50%);}
           .tuner-gauge-ptr{position:absolute;top:14px;left:50%;width:5px;height:34px;border-radius:3px;
-            background:#2e2a22;transform:translateX(-50%);transition:left .1s linear;}
-          .tuner-gauge-labels{display:flex;justify-content:space-between;font-size:10.5px;color:#a29681;padding:0 8px;}
+            background:#1b1f24;transform:translateX(-50%);transition:left .1s linear;}
+          .tuner-gauge-labels{display:flex;justify-content:space-between;font-size:10.5px;color:#9aa5b0;padding:0 8px;}
           .tuner-note-row{display:flex;align-items:baseline;justify-content:center;gap:10px;}
           .tuner-status{font-size:15px;font-weight:700;text-align:center;margin-top:6px;min-height:22px;}
-          .tuner-guide{font-size:13.5px;line-height:2;color:#6d6455;text-align:left;}
-          .tuner-guide b{color:#2e2a22;}
+          .tuner-guide{font-size:13.5px;line-height:2;color:#64707c;text-align:left;}
+          .tuner-guide b{color:#1b1f24;}
           .tuner-mic-ico{font-size:40px;text-align:center;margin-bottom:8px;}
         </style>
         <div class="seg" id="tuner-seg">
@@ -271,16 +271,16 @@ const tool = (() => {
           const ac = Math.abs(bestCents);
           if (ac <= 5) {
             stEl.textContent = '音准了！';
-            stEl.style.color = '#17614e';
-            ptrEl.style.background = '#17614e';
+            stEl.style.color = '#0fa873';
+            ptrEl.style.background = '#0fa873';
           } else if (bestCents < 0) {
             stEl.textContent = ac > 15 ? '偏低很多，拧紧 ↑' : '略低，轻轻拧紧 ↑';
-            stEl.style.color = ac > 15 ? '#b4503c' : '#c99a3f';
-            ptrEl.style.background = ac > 15 ? '#b4503c' : '#c99a3f';
+            stEl.style.color = ac > 15 ? '#e05d4d' : '#f0a22e';
+            ptrEl.style.background = ac > 15 ? '#e05d4d' : '#f0a22e';
           } else {
             stEl.textContent = ac > 15 ? '偏高很多，放松 ↓' : '略高，轻轻放松 ↓';
-            stEl.style.color = ac > 15 ? '#b4503c' : '#c99a3f';
-            ptrEl.style.background = ac > 15 ? '#b4503c' : '#c99a3f';
+            stEl.style.color = ac > 15 ? '#e05d4d' : '#f0a22e';
+            ptrEl.style.background = ac > 15 ? '#e05d4d' : '#f0a22e';
           }
         }
         loop();

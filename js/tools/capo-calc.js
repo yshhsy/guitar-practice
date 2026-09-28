@@ -59,16 +59,16 @@ const tool = {
       <style>
         .capo-table{width:100%;border-collapse:collapse;font-size:12.5px;}
         .capo-table th,.capo-table td{
-          border:1px solid #e3d8bf;padding:7px 2px;text-align:center;color:#6d6455;
+          border:1px solid #e3e8ee;padding:7px 2px;text-align:center;color:#64707c;
         }
-        .capo-table th{background:#ece4d2;color:#2e2a22;font-weight:700;}
-        .capo-table td.capo-rowhead{background:#ece4d2;color:#2e2a22;font-weight:700;}
-        .capo-table td.capo-hl{background:#17614e;color:#f3efe4;font-weight:800;}
-        .capo-table td.capo-cur-row{background:#e4efe9;}
-        .capo-lab{font-size:12px;color:#a29681;margin:10px 0 4px;font-weight:600;}
-        .capo-token2{background:#f6ead0;border-color:#e8d5ac;color:#8a6414;}
-        .capo-token2:active{background:#c99a3f;color:#3a2c0c;}
-        .capo-bad{background:#f7e3de;border-color:#e0b8ae;color:#b4503c;cursor:default;}
+        .capo-table th{background:#e9edf1;color:#1b1f24;font-weight:700;}
+        .capo-table td.capo-rowhead{background:#e9edf1;color:#1b1f24;font-weight:700;}
+        .capo-table td.capo-hl{background:#0fa873;color:#f4fbf8;font-weight:800;}
+        .capo-table td.capo-cur-row{background:#e2f6ee;}
+        .capo-lab{font-size:12px;color:#9aa5b0;margin:10px 0 4px;font-weight:600;}
+        .capo-token2{background:#fdf3e0;border-color:#f6e3bd;color:#9a6a10;}
+        .capo-token2:active{background:#f0a22e;color:#7c4a03;}
+        .capo-bad{background:#fdeceb;border-color:#eec7bf;color:#e05d4d;cursor:default;}
       </style>
 
       <div class="card">

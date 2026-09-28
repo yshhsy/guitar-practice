@@ -102,10 +102,10 @@
           <style>
             .sfl-song { padding: 15px 16px; }
             .sfl-song .sfl-nm { font-size: 16.5px; font-weight: 800; }
-            .sfl-song .sfl-ds { font-size: 12px; color: #6d6455; margin-top: 4px; line-height: 1.6; }
-            .sfl-song .sfl-meta { font-size: 11px; color: #a29681; margin-top: 8px; letter-spacing: .5px; }
+            .sfl-song .sfl-ds { font-size: 12px; color: #64707c; margin-top: 4px; line-height: 1.6; }
+            .sfl-song .sfl-meta { font-size: 11px; color: #9aa5b0; margin-top: 8px; letter-spacing: .5px; }
             .sfl-song .sfl-go { position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
-              font-size: 20px; color: #c99a3f; }
+              font-size: 20px; color: #f0a22e; }
           </style>
           <div data-list></div>
         `;
@@ -146,11 +146,11 @@
             .sfl-back { margin-bottom: 10px; }
             .sfl-timeline { overflow-x: auto; white-space: nowrap; padding: 4px 2px 6px; margin: 0 -2px; }
             .sfl-timeline .chip { display: inline-block; margin: 3px 3px; font-size: 13px; }
-            .sfl-sec-mark { font-size: 11px; color: #c99a3f; font-weight: 700; margin: 0 6px 0 2px; letter-spacing: 1px; }
-            .sfl-cur { font-size: 54px; font-weight: 800; color: #17614e; line-height: 1.1; }
-            .sfl-vlabel { font-size: 11px; color: #a29681; margin-top: 4px; letter-spacing: 1px; }
-            .sfl-meta { font-size: 12px; color: #a29681; margin-top: 8px; }
-            .sfl-status { font-size: 13px; color: #6d6455; font-weight: 600; }
+            .sfl-sec-mark { font-size: 11px; color: #f0a22e; font-weight: 700; margin: 0 6px 0 2px; letter-spacing: 1px; }
+            .sfl-cur { font-size: 54px; font-weight: 800; color: #0fa873; line-height: 1.1; }
+            .sfl-vlabel { font-size: 11px; color: #9aa5b0; margin-top: 4px; letter-spacing: 1px; }
+            .sfl-meta { font-size: 12px; color: #9aa5b0; margin-top: 8px; }
+            .sfl-status { font-size: 13px; color: #64707c; font-weight: 600; }
           </style>
           <div class="sfl-back"><button class="btn-mini" data-back>← 换一首</button></div>
 
@@ -272,7 +272,7 @@
         el.querySelector('[data-vlabel]').textContent = v ? v.label : '（暂无指法）';
         el.querySelector('[data-diagram]').innerHTML = v
           ? Diagram.chord(v.frets, { fingers: v.fingers, barre: v.barre, baseFret: v.baseFret, size: 158 })
-          : '<span style="color:#a29681;font-size:12px">该和弦暂无图示</span>';
+          : '<span style="color:#9aa5b0;font-size:12px">该和弦暂无图示</span>';
         // 拍点
         const beatIn = pos - it.start;
         const dots = el.querySelector('[data-dots]');

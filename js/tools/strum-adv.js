@@ -30,7 +30,7 @@
       tip: '四种符号混合出现，先 60 BPM 把每格读准确再逐渐加速。' },
   ];
 
-  const DIFF_COLOR = { '中级': '#b4503c', '进阶': '#8a4a2c', '高级': '#6b3fa0' };
+  const DIFF_COLOR = { '中级': '#e05d4d', '进阶': '#b04a34', '高级': '#6b3fa0' };
 
   const tool = {
     id: 'strum-adv',
@@ -56,13 +56,13 @@
         .sa-cell .sa-sym { line-height:1; font-weight:700; font-size:22px; color:var(--ink-2); }
         .sa-cell .sa-acc { font-size:11px; color:var(--red); font-weight:800; line-height:1; }
         .sa-cell .sa-beat { font-size:8px; color:var(--ink-3); margin-top:3px; font-variant-numeric:tabular-nums; }
-        .sa-cell.rest .sa-sym { color:#cfc3a8; font-size:16px; }
+        .sa-cell.rest .sa-sym { color:#d3dae2; font-size:16px; }
         .sa-cell.up .sa-sym { color:var(--gold); }
         .sa-cell.mute .sa-sym { color:var(--red); }
         .sa-cell.cur { background:var(--green); border-color:var(--green); transform:scale(1.08); box-shadow:var(--shadow); }
-        .sa-cell.cur .sa-sym, .sa-cell.cur .sa-beat, .sa-cell.cur .sa-acc { color:#f3efe4; }
+        .sa-cell.cur .sa-sym, .sa-cell.cur .sa-beat, .sa-cell.cur .sa-acc { color:#f4fbf8; }
         .sa-cell.up.cur { background:var(--gold); border-color:var(--gold); }
-        .sa-cell.up.cur .sa-sym, .sa-cell.up.cur .sa-beat, .sa-cell.up.cur .sa-acc { color:#3a2c0c; }
+        .sa-cell.up.cur .sa-sym, .sa-cell.up.cur .sa-beat, .sa-cell.up.cur .sa-acc { color:#7c4a03; }
         .sa-cell.mute.cur { background:var(--red); border-color:var(--red); }
         .sa-legend { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:12px; }
         .sa-legend span { font-size:12px; color:var(--ink-2); display:flex; align-items:center; gap:4px; }
@@ -97,7 +97,7 @@
           <span><b style="color:var(--gold)">↑</b> 上扫</span>
           <span><b style="color:var(--red)">×</b> 闷音</span>
           <span><b style="color:var(--red)">&gt;</b> 重音</span>
-          <span><b style="color:#cfc3a8">·</b> 空拍</span>
+          <span><b style="color:#d3dae2">·</b> 空拍</span>
         </div>
         <div class="result-box mt12" id="sa-tip"></div>
       `;

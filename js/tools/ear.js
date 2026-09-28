@@ -39,20 +39,20 @@
       el.innerHTML = `
         <style>
           .ear-opts { display: grid; gap: 8px; margin-top: 14px; }
-          .ear-opt { padding: 12px 6px; border: 1px solid #e3d8bf; border-radius: 12px;
-            background: #fffdf7; color: #2e2a22; font-size: 14px; cursor: pointer; transition: all .1s; }
-          .ear-opt:active { background: #ece4d2; }
-          .ear-opt .ear-num { font-size: 20px; font-weight: 800; color: #17614e; }
-          .ear-opt .ear-sub { font-size: 11px; color: #a29681; margin-left: 5px; }
+          .ear-opt { padding: 12px 6px; border: 1px solid #e3e8ee; border-radius: 12px;
+            background: #ffffff; color: #1b1f24; font-size: 14px; cursor: pointer; transition: all .1s; }
+          .ear-opt:active { background: #e9edf1; }
+          .ear-opt .ear-num { font-size: 20px; font-weight: 800; color: #0fa873; }
+          .ear-opt .ear-sub { font-size: 11px; color: #9aa5b0; margin-left: 5px; }
           .ear-opts.locked .ear-opt { pointer-events: none; opacity: .82; }
-          .ear-opt.right { background: #17614e !important; border-color: #17614e; color: #f3efe4; }
-          .ear-opt.right .ear-num, .ear-opt.wrong .ear-sub { color: #f3efe4; }
-          .ear-opt.wrong { background: #b4503c !important; border-color: #b4503c; color: #fff; }
-          .ear-score { font-size: 12.5px; color: #6d6455; }
-          .ear-score b { color: #17614e; font-size: 15px; font-variant-numeric: tabular-nums; }
-          .ear-q { font-size: 16px; font-weight: 700; color: #2e2a22; margin-top: 4px; }
-          .ear-ok { color: #17614e; font-weight: 700; }
-          .ear-no { color: #b4503c; font-weight: 700; }
+          .ear-opt.right { background: #0fa873 !important; border-color: #0fa873; color: #f4fbf8; }
+          .ear-opt.right .ear-num, .ear-opt.wrong .ear-sub { color: #f4fbf8; }
+          .ear-opt.wrong { background: #e05d4d !important; border-color: #e05d4d; color: #fff; }
+          .ear-score { font-size: 12.5px; color: #64707c; }
+          .ear-score b { color: #0fa873; font-size: 15px; font-variant-numeric: tabular-nums; }
+          .ear-q { font-size: 16px; font-weight: 700; color: #1b1f24; margin-top: 4px; }
+          .ear-ok { color: #0fa873; font-weight: 700; }
+          .ear-no { color: #e05d4d; font-weight: 700; }
         </style>
 
         <div class="card">
@@ -216,7 +216,7 @@
         resultEl.innerHTML = (right
           ? '<span class="ear-ok">✅ 答对了！</span> '
           : '<span class="ear-no">❌ 再想想～</span> ') + S.q.explain()
-          + '<br><span style="color:#a29681;font-size:12px">2 秒后自动下一题</span>';
+          + '<br><span style="color:#9aa5b0;font-size:12px">2 秒后自动下一题</span>';
         S.nextTimer = setTimeout(newQ, 2000);
       }
 

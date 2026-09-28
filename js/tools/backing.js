@@ -45,7 +45,7 @@
         .bk-tl .t1 { font-size:17px; font-weight:800; color:var(--green-deep); }
         .bk-tl .t2 { font-size:10px; color:var(--ink-3); margin-top:3px; }
         .bk-tl.cur { background:var(--green); border-color:var(--green); transform:scale(1.06); box-shadow:var(--shadow); }
-        .bk-tl.cur .t1, .bk-tl.cur .t2 { color:#f3efe4; }
+        .bk-tl.cur .t1, .bk-tl.cur .t2 { color:#f4fbf8; }
         .bk-now { display:flex; align-items:center; gap:14px; }
         .bk-now-name { font-size:38px; font-weight:800; color:var(--green-deep); line-height:1.1; }
         .bk-now-sub { font-size:12px; color:var(--ink-3); margin-top:5px; }

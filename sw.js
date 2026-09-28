@@ -1,5 +1,5 @@
 // 每次发布新版本时，把版本号 +1，旧缓存会被自动清理
-const CACHE = 'guitar-practice-v3';
+const CACHE = 'guitar-practice-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -10,6 +10,8 @@ const ASSETS = [
   './js/core/diagram.js',
   './js/core/store.js',
   './js/core/tools.js',
+  './js/core/help.js',
+  './js/core/learnpath.js',
   './js/tools/metronome.js',
   './js/tools/drum-machine.js',
   './js/tools/chord-drum.js',

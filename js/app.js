@@ -25,6 +25,7 @@ function route() {
   }
   if (hash === '#/practice') { showPage('practice'); renderTodaySummary(); renderTodayList(); return; }
   if (hash === '#/stats') { showPage('stats'); renderStats(); return; }
+  if (hash === '#/path') { showPage('path'); renderPathPage($('#path-body')); return; }
   showPage('home');
 }
 
@@ -37,6 +38,20 @@ function openTool(tool) {
   $('#tool-desc').textContent = tool.desc;
   const body = $('#tool-body');
   body.innerHTML = '';
+  // 顶部注入使用说明（可折叠）
+  const help = typeof TOOL_HELP !== 'undefined' && TOOL_HELP[tool.id];
+  if (help) {
+    const box = document.createElement('details');
+    box.className = 'help-box';
+    box.innerHTML = `
+      <summary><span class="help-ico">📖</span> 使用说明 <span class="help-arrow">›</span></summary>
+      <div class="help-body">
+        <p class="help-use">${help.use}</p>
+        <ol class="help-steps">${help.steps.map((s) => `<li>${s}</li>`).join('')}</ol>
+        <p class="help-more">不确定先学哪个？去 <a href="#/path">学习路线</a> 看看</p>
+      </div>`;
+    body.appendChild(box);
+  }
   tool.render(body, API);
   showPage('tool');
 }
@@ -55,6 +70,7 @@ window.addEventListener('hashchange', route);
 function renderHome() {
   const box = $('#tool-grid');
   box.innerHTML = '';
+  let idx = 0;
   Tools.grouped().forEach(({ cat, tools }) => {
     const title = document.createElement('div');
     title.className = 'tool-cat-title';
@@ -64,6 +80,8 @@ function renderHome() {
     tools.forEach((t) => {
       const card = document.createElement('div');
       card.className = 'tool-card';
+      card.style.animationDelay = Math.min(idx * 45, 540) + 'ms';
+      idx++;
       card.innerHTML = `
         <span class="t-tag">免费</span>
         <div class="icon-tile">${t.icon}</div>

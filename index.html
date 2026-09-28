@@ -20,7 +20,24 @@
         <h1>全部工具</h1>
         <p class="home-sub">打开就能练 · 全部免费 · 离线可用</p>
       </header>
+      <a class="path-banner" href="#/path">
+        <span class="path-banner-icon">🎯</span>
+        <span class="path-banner-text">
+          <b>新手不知道从何开始？</b>
+          <em>跟着学习路线走，两个月弹出第一首歌</em>
+        </span>
+        <span class="path-banner-arrow">›</span>
+      </a>
       <div id="tool-grid" class="tool-grid"></div>
+    </section>
+
+    <!-- ============ 学习路线页 ============ -->
+    <section class="page" id="page-path">
+      <header class="page-header">
+        <h1>学习路线</h1>
+        <p class="page-sub">从零基础到第一首弹唱，跟着走就行</p>
+      </header>
+      <div id="path-body"></div>
     </section>
 
     <!-- ============ 工具页（动态挂载） ============ -->
@@ -90,6 +107,7 @@
     <!-- ============ 底部导航 ============ -->
     <nav class="tabbar">
       <button class="tab active" data-page="home"><i>🧰</i><span>工具</span></button>
+      <button class="tab" data-page="path"><i>🎯</i><span>路线</span></button>
       <button class="tab" data-page="practice"><i>⏱️</i><span>练习</span></button>
       <button class="tab" data-page="stats"><i>📊</i><span>统计</span></button>
     </nav>
@@ -101,6 +119,8 @@
   <script src="js/core/diagram.js"></script>
   <script src="js/core/store.js"></script>
   <script src="js/core/tools.js"></script>
+  <script src="js/core/help.js"></script>
+  <script src="js/core/learnpath.js"></script>
   <!-- 工具模块 -->
   <script src="js/tools/metronome.js"></script>
   <script src="js/tools/drum-machine.js"></script>

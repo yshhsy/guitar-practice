@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#f4eee1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>弦上 · 吉他练习工具箱</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ============ 首页：全部工具 ============ -->
+    <section class="page active" id="page-home">
+      <header class="home-header">
+        <h1>全部工具</h1>
+        <p class="home-sub">打开就能练 · 全部免费 · 离线可用</p>
+      </header>
+      <div id="tool-grid" class="tool-grid"></div>
+    </section>
+
+    <!-- ============ 工具页（动态挂载） ============ -->
+    <section class="page" id="page-tool">
+      <header class="tool-header">
+        <button class="back-btn" id="tool-back">‹</button>
+        <div class="tool-header-icon" id="tool-icon"></div>
+        <div class="tool-header-text">
+          <h1 id="tool-name"></h1>
+          <p id="tool-desc"></p>
+        </div>
+      </header>
+      <div id="tool-body"></div>
+    </section>
+
+    <!-- ============ 练习页 ============ -->
+    <section class="page" id="page-practice">
+      <header class="page-header">
+        <h1>今日练习</h1>
+        <p class="page-sub" id="practice-today-summary">今天还没有练习记录</p>
+      </header>
+
+      <div class="card timer-card">
+        <div class="timer-display" id="timer-display">00:00</div>
+        <div class="chip-row" id="timer-type-row">
+          <button class="chip active" data-type="和弦练习">和弦练习</button>
+          <button class="chip" data-type="音阶练习">音阶练习</button>
+          <button class="chip" data-type="歌曲练习">歌曲练习</button>
+          <button class="chip" data-type="节奏练习">节奏练习</button>
+          <button class="chip" data-type="自由练习">自由练习</button>
+        </div>
+        <button class="btn-primary" id="timer-btn">开始练习</button>
+        <p class="hint" id="timer-hint">点开始后会计时，结束时自动保存记录</p>
+      </div>
+
+      <div class="card">
+        <h2>今日明细</h2>
+        <div id="today-list" class="record-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ 统计页 ============ -->
+    <section class="page" id="page-stats">
+      <header class="page-header">
+        <h1>练习统计</h1>
+        <p class="page-sub">坚持是最难的技巧</p>
+      </header>
+
+      <div class="stats-cards">
+        <div class="card stat-card"><div class="stat-num" id="stat-total">0<small>分钟</small></div><div class="stat-label">累计练习</div></div>
+        <div class="card stat-card"><div class="stat-num" id="stat-streak">0<small>天</small></div><div class="stat-label">连续打卡</div></div>
+        <div class="card stat-card"><div class="stat-num" id="stat-days">0<small>天</small></div><div class="stat-label">总练习天数</div></div>
+      </div>
+
+      <div class="card">
+        <h2>近 30 天</h2>
+        <div class="bar-chart" id="bar-chart"></div>
+      </div>
+
+      <div class="card">
+        <h2>练习记录</h2>
+        <div id="record-list" class="record-list"></div>
+        <button class="btn-ghost" id="export-btn">导出数据 (JSON)</button>
+      </div>
+    </section>
+
+    <!-- ============ 底部导航 ============ -->
+    <nav class="tabbar">
+      <button class="tab active" data-page="home"><i>🧰</i><span>工具</span></button>
+      <button class="tab" data-page="practice"><i>⏱️</i><span>练习</span></button>
+      <button class="tab" data-page="stats"><i>📊</i><span>统计</span></button>
+    </nav>
+  </div>
+
+  <script src="js/core/theory.js"></script>
+  <script src="js/core/audio.js"></script>
+  <script src="js/core/chords-data.js"></script>
+  <script src="js/core/diagram.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/core/tools.js"></script>
+  <!-- 工具模块 -->
+  <script src="js/tools/metronome.js"></script>
+  <script src="js/tools/drum-machine.js"></script>
+  <script src="js/tools/chord-drum.js"></script>
+  <script src="js/tools/backing.js"></script>
+  <script src="js/tools/strum-follow.js"></script>
+  <script src="js/tools/strum-adv.js"></script>
+  <script src="js/tools/chord-random.js"></script>
+  <script src="js/tools/chord-switch.js"></script>
+  <script src="js/tools/ear.js"></script>
+  <script src="js/tools/song-follow.js"></script>
+  <script src="js/tools/my-tabs.js"></script>
+  <script src="js/tools/tuner.js"></script>
+  <script src="js/tools/capo-calc.js"></script>
+  <script src="js/tools/transpose.js"></script>
+  <script src="js/tools/chord-query.js"></script>
+  <script src="js/tools/key-helper.js"></script>
+  <script src="js/tools/chord-morph.js"></script>
+  <script src="js/tools/scale-trainer.js"></script>
+  <script src="js/tools/caged-circle.js"></script>
+  <script src="js/tools/theory-book.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

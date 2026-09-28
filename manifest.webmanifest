@@ -1,0 +1,13 @@
+{
+  "name": "弦上 · 吉他练习工具箱",
+  "short_name": "弦上",
+  "description": "轻量吉他练习工具箱：节拍器、鼓机、和弦库、乐理工具",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4eee1",
+  "theme_color": "#f4eee1",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

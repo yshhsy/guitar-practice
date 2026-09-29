@@ -135,7 +135,6 @@ const Timer = {
     $('#timer-display').classList.remove('running');
     if (seconds >= 30) {
       Store.records.add({ date: Store.dateStr(), ts: Date.now(), seconds, type: this.type });
-      Growth.add(Math.max(1, Math.round(seconds / 60)), '练习打卡');
       $('#timer-hint').textContent = `已保存：${this.type} ${this.fmt(seconds)}，继续保持！`;
     } else {
       $('#timer-hint').textContent = '不足 30 秒未计入记录，再练久一点吧';
@@ -195,12 +194,6 @@ function renderStats() {
   const dayMap = {};
   records.forEach((r) => { dayMap[r.date] = (dayMap[r.date] || 0) + r.seconds; });
   $('#stat-days').innerHTML = `${Object.keys(dayMap).length}<small>天</small>`;
-
-  let streak = 0;
-  const cursor = new Date();
-  if (!dayMap[Store.dateStr(cursor)]) cursor.setDate(cursor.getDate() - 1);
-  while (dayMap[Store.dateStr(cursor)]) { streak++; cursor.setDate(cursor.getDate() - 1); }
-  $('#stat-streak').innerHTML = `${streak}<small>天</small>`;
 
   const chart = $('#bar-chart');
   chart.innerHTML = '';

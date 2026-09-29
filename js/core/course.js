@@ -128,12 +128,13 @@ function renderLessonPage(el, id) {
     </div>
 
     <div class="card lesson-body">
-      ${lesson.sections.map((s) => `
-        <div class="lesson-sec">
-          <h3>${s.h}</h3>
-          <p>${s.p}</p>
-          ${s.tip ? `<div class="lesson-tip">💡 ${s.tip}</div>` : ''}
-        </div>`).join('')}
+    ${lesson.sections.map((s) => `
+      <div class="lesson-sec">
+        <h3>${s.h}</h3>
+        <p>${s.p}</p>
+        ${s.fig && typeof FIGURES !== 'undefined' && FIGURES[s.fig] ? `<figure class="lesson-fig">${FIGURES[s.fig]}</figure>` : ''}
+        ${s.tip ? `<div class="lesson-tip">💡 ${s.tip}</div>` : ''}
+      </div>`).join('')}
     </div>
 
     <div class="card quiz-card">
@@ -222,17 +223,15 @@ function renderLessonPage(el, id) {
         bindNav();
       } else {
         resultBox.innerHTML = `<div class="quiz-done-box">
-          <p>${perfect ? '满分！乐理小天才就是你' : '得分 ' + score + '/' + lesson.quiz.length} · 完成打卡可得 <b>+${perfect ? 30 : 20} XP</b></p>
+          <p>${perfect ? '满分！这一课掌握得很扎实' : '得分 ' + score + '/' + lesson.quiz.length} · 点击完成打卡</p>
           <button class="btn-primary" id="lesson-finish">✓ 完成本课</button>
         </div>`;
         $('#lesson-finish').addEventListener('click', () => {
           const map = Course.doneMap();
           map[id] = true;
           Store.setJSON('course_done', map);
-          const gain = perfect ? 30 : 20;
-          Growth.add(gain, perfect ? '满分通过' : '完成课程');
           resultBox.innerHTML = `<div class="quiz-done-box">
-            <p>🎉 已打卡 <b>+${gain} XP</b>！知识到手，去下面练一练，或者直接</p>
+            <p>🎉 本课已完成！知识到手，别忘了去下面练一练</p>
             <div class="btn-row">${backBtn}${nextBtn}</div>
           </div>`;
           bindNav();

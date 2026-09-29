@@ -1,5 +1,5 @@
 /* ============================================================
- * 「今天」面板：问候 + 等级 + 今日练习计划 + 继续学习
+ * 「今天」面板：问候 + 今日练习计划 + 继续学习
  * 以及首次启动的新手引导
  * ============================================================ */
 
@@ -42,13 +42,6 @@ function renderToday(el) {
   const todayRecs = Store.records.load().filter((r) => r.date === todayStr);
   const todayMins = Math.floor(todayRecs.reduce((s, r) => s + r.seconds, 0) / 60);
 
-  /* 连续打卡 */
-  const days = [...new Set(Store.records.load().map((r) => r.date))];
-  let streak = 0;
-  const base = new Date();
-  if (!days.includes(Store.dateStr(base))) base.setDate(base.getDate() - 1);
-  while (days.includes(Store.dateStr(base))) { streak++; base.setDate(base.getDate() - 1); }
-
   const next = Course.nextLesson();
   const lastTool = Store.getJSON('last_tool', null);
   const lastToolObj = lastTool ? Tools.get(lastTool) : null;
@@ -62,15 +55,8 @@ function renderToday(el) {
           <div class="today-greet">${greet}，琴友</div>
           <div class="today-date">${new Date().getMonth() + 1}月${new Date().getDate()}日 · ${['周日','周一','周二','周三','周四','周五','周六'][new Date().getDay()]}</div>
         </div>
-        <div class="level-badge" id="level-badge">
-          <span class="level-lv">Lv.${Growth.level()}</span>
-          <span class="level-name">${Growth.levelName()}</span>
-          <div class="level-track"><div class="level-bar" style="width:${Math.round(Growth.progress() * 100)}%"></div></div>
-          <span class="level-next">再得 ${Growth.nextNeed()} XP 升级</span>
-        </div>
       </div>
       <div class="today-mini-stats">
-        <span>🔥 连续 ${streak} 天</span>
         <span>⏱️ 今日已练 ${todayMins} 分钟</span>
         <span>🎯 路线 ${pathDoneCnt}/${LEARN_PATH.length}</span>
       </div>
@@ -120,7 +106,7 @@ function renderToday(el) {
       <div class="card today-link" data-hash="#/practice">
         <div class="today-link-ico">⏱️</div>
         <div class="today-link-t">开始计时</div>
-        <div class="today-link-d">练琴打卡 +XP</div>
+        <div class="today-link-d">记录每次练琴</div>
       </div>
     </div>
   `;
@@ -152,7 +138,7 @@ function maybeShowOnboarding() {
         <div class="ob-slide" style="display:none">
           <div class="ob-emoji">🎯</div>
           <div class="ob-title">怎么用这个 App</div>
-          <p class="ob-p">每天打开「今天」，跟着自动生成的练习计划练；在「课堂」每天学一课乐理，答对测验还有经验值；遇到具体问题，20 个工具随时待命。</p>
+          <p class="ob-p">每天打开「今天」，跟着自动生成的练习计划练；在「课堂」按系统课程每天学一课，课后测验帮你检验掌握程度；遇到具体问题，20 个工具随时待命。</p>
         </div>
         <div class="ob-slide" style="display:none">
           <div class="ob-emoji">⏱️</div>
@@ -190,7 +176,6 @@ function maybeShowOnboarding() {
     Store.setJSON('onboard', true);
     ov.classList.add('bye');
     setTimeout(() => ov.remove(), 350);
-    Growth.toast('目标已定，开始第一练吧！');
   }
 
   nextBtn.addEventListener('click', () => {

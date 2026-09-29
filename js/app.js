@@ -11,7 +11,8 @@ let currentTool = null;
 function showPage(name) {
   $$('.page').forEach((p) => p.classList.remove('active'));
   $(`#page-${name}`).classList.add('active');
-  const tabName = name === 'tool' ? 'home' : name;
+  const tabMap = { tool: 'home', lesson: 'learn', path: 'today' };
+  const tabName = tabMap[name] || name;
   $$('.tabbar .tab').forEach((t) => t.classList.toggle('active', t.dataset.page === tabName));
   window.scrollTo(0, 0);
 }
@@ -26,7 +27,12 @@ function route() {
   if (hash === '#/practice') { showPage('practice'); renderTodaySummary(); renderTodayList(); return; }
   if (hash === '#/stats') { showPage('stats'); renderStats(); return; }
   if (hash === '#/path') { showPage('path'); renderPathPage($('#path-body')); return; }
-  showPage('home');
+  if (hash === '#/tools') { showPage('home'); return; }
+  if (hash === '#/learn') { showPage('learn'); renderLearnPage($('#learn-body')); return; }
+  if (hash.startsWith('#/lesson/')) { showPage('lesson'); renderLessonPage($('#lesson-body'), hash.slice(9)); return; }
+  // 默认落在「今天」面板
+  showPage('today');
+  renderToday($('#today-body'));
 }
 
 function openTool(tool) {
@@ -38,6 +44,7 @@ function openTool(tool) {
   $('#tool-desc').textContent = tool.desc;
   const body = $('#tool-body');
   body.innerHTML = '';
+  Store.setJSON('last_tool', tool.id);
   // 顶部注入使用说明（可折叠）
   const help = typeof TOOL_HELP !== 'undefined' && TOOL_HELP[tool.id];
   if (help) {
@@ -60,7 +67,9 @@ $('#tool-back').addEventListener('click', () => { location.hash = '#/'; });
 
 $$('.tabbar .tab').forEach((t) =>
   t.addEventListener('click', () => {
-    location.hash = t.dataset.page === 'home' ? '#/' : '#/' + t.dataset.page;
+    if (t.dataset.page === 'home') location.hash = '#/tools';
+    else if (t.dataset.page === 'today') location.hash = '#/';
+    else location.hash = '#/' + t.dataset.page;
   })
 );
 
@@ -126,6 +135,7 @@ const Timer = {
     $('#timer-display').classList.remove('running');
     if (seconds >= 30) {
       Store.records.add({ date: Store.dateStr(), ts: Date.now(), seconds, type: this.type });
+      Growth.add(Math.max(1, Math.round(seconds / 60)), '练习打卡');
       $('#timer-hint').textContent = `已保存：${this.type} ${this.fmt(seconds)}，继续保持！`;
     } else {
       $('#timer-hint').textContent = '不足 30 秒未计入记录，再练久一点吧';
@@ -229,6 +239,7 @@ $('#export-btn').addEventListener('click', () => {
 /* ================= 启动 ================= */
 renderHome();
 route();
+if (location.hash === '' || location.hash === '#/') maybeShowOnboarding();
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});
 }

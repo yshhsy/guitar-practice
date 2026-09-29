@@ -14,8 +14,27 @@
 <body>
   <div id="app">
 
-    <!-- ============ 首页：全部工具 ============ -->
-    <section class="page active" id="page-home">
+    <!-- ============ 今天：每日面板 ============ -->
+    <section class="page active" id="page-today">
+      <div id="today-body"></div>
+    </section>
+
+    <!-- ============ 课堂：系统课程 ============ -->
+    <section class="page" id="page-learn">
+      <header class="page-header">
+        <h1>课堂</h1>
+        <p class="page-sub">吉他 + 乐理系统课，每课都有随堂测验</p>
+      </header>
+      <div id="learn-body"></div>
+    </section>
+
+    <!-- ============ 课时阅读页 ============ -->
+    <section class="page" id="page-lesson">
+      <div id="lesson-body"></div>
+    </section>
+
+    <!-- ============ 工具箱 ============ -->
+    <section class="page" id="page-home">
       <header class="home-header">
         <h1>全部工具</h1>
         <p class="home-sub">打开就能练 · 全部免费 · 离线可用</p>
@@ -106,8 +125,9 @@
 
     <!-- ============ 底部导航 ============ -->
     <nav class="tabbar">
-      <button class="tab active" data-page="home"><i>🧰</i><span>工具</span></button>
-      <button class="tab" data-page="path"><i>🎯</i><span>路线</span></button>
+      <button class="tab active" data-page="today"><i>🏠</i><span>今天</span></button>
+      <button class="tab" data-page="learn"><i>📚</i><span>课堂</span></button>
+      <button class="tab" data-page="home"><i>🧰</i><span>工具</span></button>
       <button class="tab" data-page="practice"><i>⏱️</i><span>练习</span></button>
       <button class="tab" data-page="stats"><i>📊</i><span>统计</span></button>
     </nav>
@@ -118,9 +138,16 @@
   <script src="js/core/chords-data.js"></script>
   <script src="js/core/diagram.js"></script>
   <script src="js/core/store.js"></script>
+  <script src="js/core/growth.js"></script>
   <script src="js/core/tools.js"></script>
   <script src="js/core/help.js"></script>
   <script src="js/core/learnpath.js"></script>
+  <script src="js/core/course.js"></script>
+  <script src="js/data/course-ch1.js"></script>
+  <script src="js/data/course-ch2.js"></script>
+  <script src="js/data/course-ch3.js"></script>
+  <script src="js/data/course-ch4.js"></script>
+  <script src="js/core/today.js"></script>
   <!-- 工具模块 -->
   <script src="js/tools/metronome.js"></script>
   <script src="js/tools/drum-machine.js"></script>
